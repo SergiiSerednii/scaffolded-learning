@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scaffolded-learning"
+version = "0.1.0"
+description = "Multi-error / scaffolded learning models built from composable blocks."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "torch>=2.1",
+    "numpy>=1.21",
+    "pandas>=1.4",
+    "scikit-learn>=0.23",
+    "pyarrow>=14.0",
+    "optuna>=3.5",
+]
+authors = [
+    { name = "Sergii Serednii", email = "sseredniy@gmail.com" }
+]
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
